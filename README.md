@@ -1,4 +1,4 @@
-# Azure-Based-Cloud-Visualization-for-UK-Traffic-Accident-Analysis
+![image](https://github.com/user-attachments/assets/d395dab1-0a6f-41e6-88d5-8486647dfb9b)# Azure-Based-Cloud-Visualization-for-UK-Traffic-Accident-Analysis
 A Business Intelligence (BI) and data engineering project focused on analyzing traffic accidents in the UK using Microsoft Azure cloud technologies. This project leverages Azure Functions, Blob Storage, Azure SQL Database, and Power BI to deliver a scalable, automated, and visual analytics solution.
 
 ## 📊 Project Overview
@@ -45,10 +45,12 @@ This project addresses the need for scalable and real-time insights into UK traf
 
 ## 📊 Dashboards
 
-- **Page 1 – Accident Overview:** 
-- **Page 2 – Uncontrollable Causes:** 
+- **Page 1 – Accident Overview:**
+  ![Image](https://github.com/user-attachments/assets/6d049c12-368a-4750-a7be-30b1722b4bab) 
+- **Page 2 – Uncontrollable Causes:**
+  ![Image](https://github.com/user-attachments/assets/acfff184-fef8-4c90-b355-2ef7e1eeee88)
 - **Page 3 – Controllable Causes:** 
-
+  ![Image](https://github.com/user-attachments/assets/7c4d511f-8714-48b7-a043-ebb8f1323209)
 ## 📐 Data Model
 
 A star schema with the following structure:
