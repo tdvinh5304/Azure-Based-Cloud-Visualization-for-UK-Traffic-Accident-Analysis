@@ -1,0 +1,9 @@
+CREATE TABLE function_logs (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    FunctionName NVARCHAR(100),
+    Status NVARCHAR(50),
+    TriggeredBy NVARCHAR(50),
+    RecordCount INT,
+    Timestamp DATETIME,
+    Message NVARCHAR(500)
+);

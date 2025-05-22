@@ -1,0 +1,89 @@
+-- Tạo bảng [gold].[Dim_LightConditions]
+CREATE TABLE [gold].[Dim_LightConditions] (
+    [LightConditionsKey] INT IDENTITY(1,1) NOT NULL,
+    [Light_Conditions] INT NULL,
+    [Description] NVARCHAR(4000) NULL,
+    [Start_Date] DATE NULL, -- Cột mới
+    [End_Date] DATE NULL,   -- Cột mới
+    [Status] BIT NULL      -- Cột mới
+);
+
+-- Tạo bảng [gold].[Dim_Police]
+CREATE TABLE [gold].[Dim_Police] (
+    [PoliceForceKey] INT IDENTITY(1,1) NOT NULL,
+    [Police_Force] INT NULL,
+    [Start_Date] DATE NULL, -- Cột mới
+    [End_Date] DATE NULL,   -- Cột mới
+    [Status] BIT NULL      -- Cột mới
+);
+
+-- Tạo bảng [gold].[Dim_RoadType]
+CREATE TABLE [gold].[Dim_RoadType] (
+    [RoadTypeKey] INT IDENTITY(1,1) NOT NULL,
+    [Road_Type] INT NULL,
+    [Description] NVARCHAR(4000) NULL,
+    [Start_Date] DATE NULL, -- Cột mới
+    [End_Date] DATE NULL,   -- Cột mới
+    [Status] BIT NULL      -- Cột mới
+);
+
+-- Tạo bảng [gold].[Dim_AccidentSeverity]
+CREATE TABLE [gold].[Dim_AccidentSeverity] (
+    [AccidentSeverityKey] INT IDENTITY(1,1) NOT NULL,
+    [Accident_Severity] INT NULL,
+    [Description] NVARCHAR(4000) NULL,
+    [Start_Date] DATE NULL, -- Cột mới
+    [End_Date] DATE NULL,   -- Cột mới
+    [Status] BIT NULL      -- Cột mới
+);
+
+-- Tạo bảng [gold].[Dim_RoadSurfaceConditions]
+CREATE TABLE [gold].[Dim_RoadSurfaceConditions] (
+    [RoadSurfaceConditionsKey] INT IDENTITY(1,1) NOT NULL,
+    [Road_Surface_Conditions] INT NULL,
+    [Description] NVARCHAR(4000) NULL,
+    [Start_Date] DATE NULL, -- Cột mới
+    [End_Date] DATE NULL,   -- Cột mới
+    [Status] BIT NULL      -- Cột mới
+);
+
+-- Tạo bảng [gold].[Dim_WeatherConditions]
+CREATE TABLE [gold].[Dim_WeatherConditions] (
+    [WeatherConditionsKey] INT IDENTITY(1,1) NOT NULL,
+    [Weather_Conditions] INT NULL,
+    [Description] NVARCHAR(4000) NULL,
+    [Start_Date] DATE NULL, -- Cột mới
+    [End_Date] DATE NULL,   -- Cột mới
+    [Status] BIT NULL     -- Cột mới
+);
+
+-- Tạo bảng [gold].[Dim_UrbanorRuralArea]
+CREATE TABLE [gold].[Dim_UrbanorRuralArea] (
+    [UrbanRuralAreaKey] INT IDENTITY(1,1) NOT NULL,
+    [Urban_or_Rural_Area] INT NOT NULL,
+	[Description] NVARCHAR(4000) NULL,
+    [Start_Date] DATE NULL, -- Cột mới
+    [End_Date] DATE NULL,   -- Cột mới
+    [Status] BIT NULL      -- Cột mới
+);
+
+-- Tạo bảng [gold].[Fact_Accidents]
+CREATE TABLE [gold].[Fact_Accidents] (
+    [Accident_Index] NVARCHAR(4000) NOT NULL,
+    [PoliceForceKey] INT NOT NULL,
+    [LightConditionsKey] INT NOT NULL,
+    [RoadTypeKey] INT NOT NULL,
+    [AccidentSeverityKey] INT NOT NULL,
+    [RoadSurfaceConditionsKey] INT NOT NULL,
+    [WeatherConditionsKey] INT NOT NULL,
+    [UrbanRuralAreaKey] INT NOT NULL,
+    [Longitude] FLOAT NULL,
+    [Latitude] FLOAT NULL,
+    [Local_Authority_District] INT NULL,
+    [Local_Authority_Highway] NVARCHAR(4000) NULL,
+    [Date] DATE NULL,
+    [Time] NVARCHAR(4000) NULL,
+    [Number_of_Vehicles] INT NULL,
+    [Number_of_Casualties] INT NULL,
+    [Speed_Limit] INT NULL
+);
